@@ -16,6 +16,7 @@
         self.detail = [dictionany objectForKey:@"content"];
         self.alternate = [dictionany objectForKey:@"alternate"];
         self.published = [dictionany objectForKey:@"published"];
+        // self.url = [dictionany objectForKey:@""];
     }
     return self;
 }
