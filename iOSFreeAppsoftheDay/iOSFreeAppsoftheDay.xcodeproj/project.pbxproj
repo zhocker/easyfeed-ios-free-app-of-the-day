@@ -39,8 +39,8 @@
 		B97748BF17BE02EC00EC6A45 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B97748C217BE02EC00EC6A45 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		B97748C517BE02EC00EC6A45 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		B97748C717BE02EC00EC6A45 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B97748C817BE02EC00EC6A45 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B97748C717BE02EC00EC6A45 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = iOSFreeAppsoftheDay/ViewController.h; sourceTree = SOURCE_ROOT; };
+		B97748C817BE02EC00EC6A45 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = iOSFreeAppsoftheDay/ViewController.m; sourceTree = SOURCE_ROOT; };
 		B97748D117BE039900EC6A45 /* Entrie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entrie.h; sourceTree = "<group>"; };
 		B97748D217BE039900EC6A45 /* Entrie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entrie.m; sourceTree = "<group>"; };
 		B97748E917BE10B700EC6A45 /* EntrieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntrieCell.h; sourceTree = "<group>"; };
@@ -97,8 +97,6 @@
 				B97748B917BE02EC00EC6A45 /* AppDelegate.m */,
 				B97748C117BE02EC00EC6A45 /* MainStoryboard_iPhone.storyboard */,
 				B97748C417BE02EC00EC6A45 /* MainStoryboard_iPad.storyboard */,
-				B97748C717BE02EC00EC6A45 /* ViewController.h */,
-				B97748C817BE02EC00EC6A45 /* ViewController.m */,
 				B97748B017BE02EC00EC6A45 /* Supporting Files */,
 			);
 			path = iOSFreeAppsoftheDay;
@@ -132,6 +130,8 @@
 			children = (
 				B97748E917BE10B700EC6A45 /* EntrieCell.h */,
 				B97748EA17BE10B700EC6A45 /* EntrieCell.m */,
+				B97748C717BE02EC00EC6A45 /* ViewController.h */,
+				B97748C817BE02EC00EC6A45 /* ViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -340,6 +340,7 @@
 				B97748CE17BE02EC00EC6A45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

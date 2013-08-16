@@ -17,5 +17,10 @@
 -(id)initWithDictionany:(NSDictionary *)dictionany;
 @property (nonatomic,strong)NSString *name;
 @property (nonatomic,strong)NSString *detail;
+@property (nonatomic,strong)NSString *alternate;
+@property (nonatomic,strong)NSString *published;
+
+@property (nonatomic,strong)NSString *url;
+
 @property (nonatomic,strong)UIImage *image;
 @end

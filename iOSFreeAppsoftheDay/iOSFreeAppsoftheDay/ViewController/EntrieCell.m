@@ -14,21 +14,33 @@
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UITextView *detail;
 
+@property (weak, nonatomic) IBOutlet UILabel *subTitle;
 
 @end
 
 @implementation EntrieCell
 
 -(void)photoDidFinishLoadingImage:(Entrie *)entrie{
-//    [self.imageView setImage:entrie.image];
+    // [self.imageView setImage:entrie.image];
 }
 
 -(void)configureWithPhoto:(Entrie *)entrie{
     entrie.delegate = self;
-    [self.name setText:[entrie name]];
-//    [self.detail setText:[entrie detail]];
-
+    [self.name setText:[NSString stringWithFormat:@"Published : %@",[[[entrie published] componentsSeparatedByString:@"T"] objectAtIndex:0]]];
+    
+    [self.name setHighlightedTextColor:[UIColor orangeColor]];
+    [self.subTitle setHighlightedTextColor:[UIColor orangeColor]];
     [self.detail setValue:[entrie detail] forKey:@"contentToHTMLString"];
+    
+    UIView *bgColor = [[UIView alloc] initWithFrame:self.frame];
+    [bgColor setBackgroundColor:[UIColor clearColor]];
+    [self setSelectedBackgroundView:bgColor];
+
+}
+
+-(void)link{
+    // https:\/\/itunes.apple.com\/th\/app\/puzzle-retreat\/id561834333\u003C\/a>
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

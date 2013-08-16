@@ -9,14 +9,17 @@
 #import "ViewController.h"
 #import "Entrie.h"
 #import "EntrieCell.h"
-@interface ViewController () <UITableViewDataSource,UITableViewDelegate>
+@interface ViewController () <UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *_entrieTableView;
+- (IBAction)infoButtonAction:(id)sender;
 
 @end
 
 @implementation ViewController {
     NSArray *_entries;
+    NSUInteger userSelectedIndex;
 }
+static NSUInteger OPENONSAFARI = 1;
 
 BOOL isLog = YES;
 
@@ -81,5 +84,30 @@ BOOL isLog = YES;
 
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    userSelectedIndex = indexPath.row;
+    [self openAlertView];
+}
 
+-(void)openAlertView {
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"ฟรีกาก" message:@"Open on Safari" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Open", nil];
+    [alertView show];
+}
+
+-(void)linkButtonClick:(Entrie *)entrie{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[entrie alternate]]];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == OPENONSAFARI) {
+        [self linkButtonClick:_entries[userSelectedIndex]];
+    }
+}
+
+
+
+- (IBAction)infoButtonAction:(id)sender {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ฟรีกาก" message:@"เขี่ย by Editor #CoEToday" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alertView show];
+}
 @end
