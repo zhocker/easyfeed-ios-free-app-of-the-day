@@ -21,6 +21,8 @@
 		B97748C917BE02EC00EC6A45 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B97748C817BE02EC00EC6A45 /* ViewController.m */; };
 		B97748D317BE039900EC6A45 /* Entrie.m in Sources */ = {isa = PBXBuildFile; fileRef = B97748D217BE039900EC6A45 /* Entrie.m */; };
 		B97748EB17BE10B700EC6A45 /* EntrieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B97748EA17BE10B700EC6A45 /* EntrieCell.m */; };
+		B97748F017BE2ED800EC6A45 /* 5340@2x 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B97748EF17BE2ED800EC6A45 /* 5340@2x 2.png */; };
+		B97748F217BE2F1400EC6A45 /* 5340@2x 3.png in Resources */ = {isa = PBXBuildFile; fileRef = B97748F117BE2F1400EC6A45 /* 5340@2x 3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		B97748D217BE039900EC6A45 /* Entrie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entrie.m; sourceTree = "<group>"; };
 		B97748E917BE10B700EC6A45 /* EntrieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntrieCell.h; sourceTree = "<group>"; };
 		B97748EA17BE10B700EC6A45 /* EntrieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntrieCell.m; sourceTree = "<group>"; };
+		B97748EF17BE2ED800EC6A45 /* 5340@2x 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5340@2x 2.png"; sourceTree = "<group>"; };
+		B97748F117BE2F1400EC6A45 /* 5340@2x 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5340@2x 3.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 		B977489D17BE02EC00EC6A45 = {
 			isa = PBXGroup;
 			children = (
+				B97748F117BE2F1400EC6A45 /* 5340@2x 3.png */,
+				B97748EF17BE2ED800EC6A45 /* 5340@2x 2.png */,
 				B97748AF17BE02EC00EC6A45 /* iOSFreeAppsoftheDay */,
 				B97748A817BE02EC00EC6A45 /* Frameworks */,
 				B97748A717BE02EC00EC6A45 /* Products */,
@@ -193,6 +199,8 @@
 				B97748C017BE02EC00EC6A45 /* Default-568h@2x.png in Resources */,
 				B97748C317BE02EC00EC6A45 /* MainStoryboard_iPhone.storyboard in Resources */,
 				B97748C617BE02EC00EC6A45 /* MainStoryboard_iPad.storyboard in Resources */,
+				B97748F017BE2ED800EC6A45 /* 5340@2x 2.png in Resources */,
+				B97748F217BE2F1400EC6A45 /* 5340@2x 3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +314,7 @@
 				GCC_PREFIX_HEADER = "iOSFreeAppsoftheDay/iOSFreeAppsoftheDay-Prefix.pch";
 				INFOPLIST_FILE = "iOSFreeAppsoftheDay/iOSFreeAppsoftheDay-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -317,6 +326,7 @@
 				GCC_PREFIX_HEADER = "iOSFreeAppsoftheDay/iOSFreeAppsoftheDay-Prefix.pch";
 				INFOPLIST_FILE = "iOSFreeAppsoftheDay/iOSFreeAppsoftheDay-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

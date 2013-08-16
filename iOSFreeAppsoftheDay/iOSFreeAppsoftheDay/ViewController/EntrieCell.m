@@ -26,8 +26,8 @@
 
 -(void)configureWithPhoto:(Entrie *)entrie{
     entrie.delegate = self;
-    [self.name setText:[NSString stringWithFormat:@"Published : %@",[[[entrie published] componentsSeparatedByString:@"T"] objectAtIndex:0]]];
     
+    [self.name setText:[NSString stringWithFormat:@"Published : %@",[[[entrie published] componentsSeparatedByString:@"T"] objectAtIndex:0]]];
     [self.name setHighlightedTextColor:[UIColor orangeColor]];
     [self.subTitle setHighlightedTextColor:[UIColor orangeColor]];
     [self.detail setValue:[entrie detail] forKey:@"contentToHTMLString"];

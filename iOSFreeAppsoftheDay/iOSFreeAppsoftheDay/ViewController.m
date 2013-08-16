@@ -18,6 +18,7 @@
 @implementation ViewController {
     NSArray *_entries;
     NSUInteger userSelectedIndex;
+    UIActivityIndicatorView *spinner;
 }
 static NSUInteger OPENONSAFARI = 1;
 
@@ -27,9 +28,23 @@ BOOL isLog = YES;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self progress];
     [self loadFeedData];
+
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+
 }
 
+
+-(void)progress{
+    spinner = [[UIActivityIndicatorView alloc]
+               initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    spinner.center = CGPointMake((self.view.frame.size.width/2), (self.view.frame.size.width/2));
+    spinner.hidesWhenStopped = YES;
+    [self.view addSubview:spinner];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -37,7 +52,7 @@ BOOL isLog = YES;
 }
 
 -(void)loadFeedData {
-    
+    [spinner startAnimating];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         
         NSURL *url = [NSURL URLWithString:@"https://www.facebook.com/feeds/page.php?format=rss20&id=%20153667784836819&format=json"];
@@ -64,13 +79,14 @@ BOOL isLog = YES;
         dispatch_async(dispatch_get_main_queue(), ^{
             if (isLog) NSLog(@"%@",_entries);
             [self._entrieTableView reloadData];
+            [spinner stopAnimating];
         });
     });
     
 }
 
 -(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 308;
+    return 350;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
